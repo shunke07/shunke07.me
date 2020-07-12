@@ -42,6 +42,24 @@ const styles = css`
     display: flex;
     justify-content: center;
   }
+
+  > header {
+    > h1 {
+      font-family: "Montserrat-Bold", "Hiragino Sans",
+        "Hiragino Kaku Gothic ProN", "Helvetica Neue", Arial, Meiryo, sans-serif;
+      font-size: 40px;
+      letter-spacing: 0.04em;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    > h2 {
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
 `;
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
