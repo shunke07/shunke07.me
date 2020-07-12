@@ -7,6 +7,7 @@ const styles = css`
   position: relative;
   width: 100%;
   height: 216px;
+  margin-bottom: 24px;
   border-radius: 4px;
   box-shadow: ${$boxShadows["1dp"]};
   list-style: none;
@@ -57,6 +58,13 @@ const works = [
     description:
       "ShareTuneは音楽の最新リリース情報を手に入れ、ブックマークを作成したり、コメントを投稿することができるWebアプリです。",
     tools: "TypeScript, Nuxt.js, Firebase, SCSS, Spotify API",
+  },
+  {
+    title: "shunke07.com",
+    url: "https://shunke07.com/",
+    description:
+      "本サイト。Headless CMS と Next.js、Vercel を利用した静的ブログサイトです。",
+    tools: "TypeScript, Next.js, Emotion (CSS in JS), microCMS (Headless CMS)",
   },
 ];
 
