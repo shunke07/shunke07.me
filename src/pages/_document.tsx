@@ -16,6 +16,12 @@ class MyDocument extends Document {
             href="/icons/apple-touch-icon.png"
           />
           <link rel="icon" href="/favicon.ico" />
+          <link
+            rel="preload"
+            href="/fonts/Montserrat-Bold.ttf"
+            as="font"
+            crossOrigin=""
+          />
         </Head>
         <body>
           <Main />

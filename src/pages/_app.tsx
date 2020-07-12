@@ -22,6 +22,10 @@ const globalStyles = css`
     background-color: #fafafa;
     color: #424242;
   }
+  @font-face {
+    font-family: "Montserrat-Bold";
+    src: url("/fonts/Montserrat-Bold.ttf");
+  }
 `;
 
 const styles = css`
