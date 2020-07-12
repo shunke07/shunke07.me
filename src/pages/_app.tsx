@@ -22,9 +22,6 @@ const globalStyles = css`
     background-color: #fafafa;
     color: #424242;
   }
-  li {
-    list-style: none;
-  }
 `;
 
 const styles = css`
