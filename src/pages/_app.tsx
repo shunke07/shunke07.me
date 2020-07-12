@@ -2,6 +2,8 @@
 import { Global, css, jsx } from "@emotion/core";
 import { AppProps } from "next/app";
 import Link from "next/link";
+//
+import { $colors } from "common/theme";
 
 const globalStyles = css`
   *,
@@ -20,7 +22,7 @@ const globalStyles = css`
       Arial, Meiryo, sans-serif;
     letter-spacing: 0.02em;
     background-color: #fafafa;
-    color: #424242;
+    color: ${$colors.gray.main};
   }
   @font-face {
     font-family: "Montserrat-Bold";
