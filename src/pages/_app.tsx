@@ -54,12 +54,14 @@ const styles = css`
 
       a {
         text-decoration: none;
+        color: ${$colors.gray.main};
       }
     }
 
     > h2 {
       font-size: 16px;
       font-weight: normal;
+      color: ${$colors.gray.light};
     }
   }
 `;
