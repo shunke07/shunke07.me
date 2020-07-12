@@ -60,10 +60,6 @@ const Home: NextPage = () => {
           <h1>Contact</h1>
           <p>contact[At]shunke07.com</p>
         </section>
-
-        <footer>
-          <small>Copyright © 2020 Shunke Takami</small>
-        </footer>
       </main>
     </div>
   );
