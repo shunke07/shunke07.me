@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "target": "es2019",
     "lib": [
       "dom",
@@ -23,8 +23,8 @@
     "node_modules"
   ],
   "include": [
-    "next-env.d.ts",
+    "src/pages/next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx", "../../next-env.d.ts"
   ]
 }
