@@ -2,16 +2,19 @@
 import { css, jsx } from "@emotion/core";
 import { NextPage } from "next";
 import Head from "next/head";
+//
+import { $colors } from "common/theme";
+import { Works } from "components/Works";
 
 const styles = css`
   section {
     margin: 56px 0;
 
     > h1 {
-      color: #ff5722;
+      color: ${$colors.primary.main};
       margin-bottom: 16px;
       padding-bottom: 4px;
-      border-bottom: 2px solid #ff5722;
+      border-bottom: 2px solid ${$colors.primary.main};
       letter-spacing: 0.03em;
     }
   }
@@ -52,7 +55,7 @@ const styles = css`
         border-radius: 50%;
 
         &.site {
-          background-color: #ff7043;
+          background-color: ${$colors.primary.light};
           padding: 2px;
         }
       }
@@ -139,6 +142,7 @@ const Home: NextPage = () => {
 
       <section>
         <h1>Portfolio</h1>
+        <Works />
       </section>
 
       <section>
