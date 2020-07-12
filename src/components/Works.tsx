@@ -14,7 +14,6 @@ const styles = css`
   :hover {
     box-shadow: ${$boxShadows["4dp"]};
   }
-
   > a {
     width: 100%;
     height: 100%;
@@ -40,7 +39,6 @@ const styles = css`
         margin-right: 8px;
       }
     }
-
     .tools {
       position: absolute;
       width: 100%;
