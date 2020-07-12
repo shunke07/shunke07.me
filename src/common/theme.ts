@@ -2,6 +2,7 @@ const $colors = {
   primary: {
     light: "#ff7043",
     main: "#ff5722",
+    dark: "#bf360c",
   },
   secondary: {
     main: "#007c91",

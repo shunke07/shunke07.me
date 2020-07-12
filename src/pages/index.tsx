@@ -27,7 +27,7 @@ const styles = css`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 16px 0 -32px;
+    margin: 56px 0 -32px;
 
     .thumbnail {
       object-fit: cover;
