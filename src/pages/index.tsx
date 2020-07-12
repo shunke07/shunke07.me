@@ -1,10 +1,13 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
-import { NextPage } from "next";
+import { NextPage, GetStaticProps } from "next";
 import Head from "next/head";
+import { getContents } from "repositories/cms";
+import { Contents } from "types/cms";
 //
 import { $colors } from "common/theme";
 import { Works } from "components/Works";
+import { EntryList } from "components/EntryList";
 
 const styles = css`
   section {
@@ -18,7 +21,6 @@ const styles = css`
       letter-spacing: 0.03em;
     }
   }
-
   .profile {
     width: 100%;
     display: flex;
@@ -34,7 +36,6 @@ const styles = css`
       margin-bottom: 16px;
     }
   }
-
   .link-buttons {
     a {
       display: inline-block;
@@ -48,7 +49,6 @@ const styles = css`
         opacity: 0.6;
         transition-duration: 0.25s;
       }
-
       img {
         width: 32px;
         height: 32px;
@@ -82,7 +82,19 @@ const styles = css`
   }
 `;
 
-const Home: NextPage = () => {
+type Props = {
+  contents: Contents[];
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const contents = await getContents();
+
+  return {
+    props: { contents },
+  };
+};
+
+const Home: NextPage<Props> = ({ contents }: Props) => {
   return (
     <div css={styles}>
       <Head>
@@ -147,6 +159,7 @@ const Home: NextPage = () => {
 
       <section>
         <h1>Blog</h1>
+        <EntryList contents={contents} />
       </section>
 
       <section>
