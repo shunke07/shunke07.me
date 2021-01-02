@@ -13,6 +13,7 @@ type Props = {
 
 const styles = css`
   list-style: none;
+  margin-bottom: 16px;
 
   .published-at {
     color: ${$colors.gray.light};
