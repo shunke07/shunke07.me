@@ -1,6 +1,7 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import React from "react";
-import { css, jsx } from "@emotion/core";
+import { css, jsx } from "@emotion/react";
 import { $colors, $boxShadows } from "common/theme";
 
 const styles = css`

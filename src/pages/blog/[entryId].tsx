@@ -1,5 +1,7 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+import { Fragment } from "react";
+import { css, jsx } from "@emotion/react";
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import { getContents, getEntry } from "repositories/cms";
@@ -67,13 +69,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 const Article: NextPage<Props> = ({ entry }: Props) => {
   return (
-    <>
+    <Fragment>
       <Head>
         <title>{entry.title} | shunke07.com</title>
       </Head>
       <article css={styles}>
         {entry && (
-          <>
+          <Fragment>
             <h1 className="title">{entry.title}</h1>
             <p className="published-at">
               <time>{dayjs(entry.publishedAt).format("YYYY.MM.DD")}</time>
@@ -82,10 +84,10 @@ const Article: NextPage<Props> = ({ entry }: Props) => {
               className="text"
               dangerouslySetInnerHTML={{ __html: entry.text }}
             />
-          </>
+          </Fragment>
         )}
       </article>
-    </>
+    </Fragment>
   );
 };
 

@@ -1,5 +1,6 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
-import { Global, css, jsx } from "@emotion/core";
+import { Global, css, jsx } from "@emotion/react";
 import { AppProps } from "next/app";
 import Link from "next/link";
 

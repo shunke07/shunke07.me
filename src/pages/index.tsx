@@ -1,7 +1,9 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+import { css, jsx } from "@emotion/react";
 import { NextPage, GetStaticProps } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import { getContents } from "repositories/cms";
 import { Contents } from "types/cms";
 //
@@ -123,7 +125,12 @@ const Home: NextPage<Props> = ({ contents }: Props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/assets/svg/twitter-logo.svg" alt="Twitterアイコン" />
+            <Image
+              src="/assets/svg/twitter-logo.svg"
+              alt="Twitterアイコン"
+              width={32}
+              height={32}
+            />
           </a>
           <a
             href="https://theunify.jp"
