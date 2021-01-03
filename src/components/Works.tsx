@@ -15,6 +15,14 @@ const styles = css`
   box-shadow: ${$boxShadows["1dp"]};
   transition: all 0.1s;
 
+  @media screen and (max-width: 375px) {
+    height: 300px;
+  }
+
+  @media screen and (min-width: 376px) and (max-width: 480px) {
+    height: 240px;
+  }
+
   @media (prefers-color-scheme: dark) {
     background-color: #373737;
   }
