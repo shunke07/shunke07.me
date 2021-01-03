@@ -3,7 +3,6 @@
 import { css, jsx } from "@emotion/react";
 import { NextPage, GetStaticProps } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { getContents } from "repositories/cms";
 import { Contents } from "types/cms";
 //
@@ -42,7 +41,7 @@ const styles = css`
     a {
       display: inline-block;
       box-sizing: content-box;
-      padding: 8px;
+      padding: 0 8px;
       width: 32px;
       height: 32px;
       border-radius: 50%;
@@ -56,9 +55,11 @@ const styles = css`
         height: 32px;
         border-radius: 50%;
 
-        &.site {
-          background-color: ${$colors.primary.light};
+        &.github {
           padding: 2px;
+        }
+        &.twitter {
+          object-fit: none;
         }
       }
     }
@@ -118,29 +119,21 @@ const Home: NextPage<Props> = ({ contents }: Props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/assets/svg/github-logo.svg" alt="GitHubアイコン" />
+            <img
+              className="github"
+              src="/assets/svg/github-logo.svg"
+              alt="GitHubアイコン"
+            />
           </a>
           <a
             href="https://twitter.com/shunke07"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
+            <img
+              className="twitter"
               src="/assets/svg/twitter-logo.svg"
               alt="Twitterアイコン"
-              width={32}
-              height={32}
-            />
-          </a>
-          <a
-            href="https://theunify.jp"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/assets/svg/group.svg"
-              alt="チームサイトアイコン"
-              className="site"
             />
           </a>
         </div>
