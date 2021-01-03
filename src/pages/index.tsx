@@ -9,6 +9,7 @@ import { Contents } from "types/cms";
 import { $colors } from "common/theme";
 import { Works } from "components/Works";
 import { EntryList } from "components/EntryList";
+import MailIcon from "../../public/assets/svg/mail.svg";
 
 const styles = css`
   section {
@@ -79,8 +80,9 @@ const styles = css`
     display: flex;
     align-items: center;
 
-    > img {
+    > svg {
       margin-right: 4px;
+      color: var(--light-gray);
     }
   }
 `;
@@ -165,7 +167,7 @@ const Home: NextPage<Props> = ({ contents }: Props) => {
       <section>
         <h1>Contact</h1>
         <p className="mail">
-          <img src="assets/svg/mail.svg" alt="メールアイコン" />
+          <MailIcon title="メールアイコン" />
           contact[At]shunke07.com
         </p>
       </section>

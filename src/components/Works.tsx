@@ -3,6 +3,7 @@
 import React from "react";
 import { css, jsx } from "@emotion/react";
 import { $colors, $boxShadows } from "common/theme";
+import OpenIcon from "../../public/assets/svg/open-in-new.svg";
 
 const styles = css`
   position: relative;
@@ -42,7 +43,7 @@ const styles = css`
       color: ${$colors.secondary.main};
       position: relative;
 
-      > img {
+      > svg {
         margin-right: 8px;
         color: var(--light-gray);
       }
@@ -70,7 +71,7 @@ const works = [
     title: "shunke07.com",
     url: "https://github.com/shunke07/shunke07.com",
     description:
-      "本サイト。Headless CMS と Next.js、Vercel を利用した静的ブログサイトです。",
+      "本サイト。Headless CMS と Next.js、Vercel を利用した静的ブログサイトです。デバイスのテーマに応じたカラーを表示（ダークモード対応）しています。",
     tools: "TypeScript, Next.js, Emotion (CSS in JS), microCMS (Headless CMS)",
   },
 ];
@@ -83,7 +84,7 @@ export const Works: React.FC = () => {
           <li css={styles} key={index}>
             <a href={work.url} target="_blank" rel="noopener noreferrer">
               <p className="title">
-                <img src="/assets/svg/open-in-new.svg" alt="新規タブで開く" />
+                <OpenIcon title="新規タブで開く" />
                 {work.title}
               </p>
               <p>{work.description}</p>
