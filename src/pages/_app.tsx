@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import { Global, css, jsx } from "@emotion/react";
 import { AppProps } from "next/app";
+import Head from "next/head";
 import Link from "next/link";
 
 const globalStyles = css`
@@ -81,6 +82,9 @@ const styles = css`
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
   <div css={styles}>
     <Global styles={globalStyles} />
+    <Head>
+      <meta name="viewport" content="initial-scale=1, width=device-width" />
+    </Head>
     <header>
       <h1>
         <Link href="/">

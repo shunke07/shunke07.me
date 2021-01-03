@@ -9,7 +9,6 @@ class MyDocument extends Document {
             name="description"
             content="This site is Shunke's website. Shunke is Software Developer, Web Front-End Developer in Tokyo."
           />
-          <meta name="viewport" content="initial-scale=1, width=device-width" />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
