@@ -2,10 +2,21 @@
 import { Global, css, jsx } from "@emotion/core";
 import { AppProps } from "next/app";
 import Link from "next/link";
-//
-import { $colors } from "common/theme";
 
 const globalStyles = css`
+  :root {
+    --main-text: #424242;
+    --light-gray: #616161;
+    --main-bg: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --main-text: #fafafa;
+      --light-gray: #9e9e9e;
+      --main-bg: #212121;
+    }
+  }
+
   *,
   *::before,
   *::after {
@@ -22,7 +33,6 @@ const globalStyles = css`
       Arial, Meiryo, sans-serif;
     letter-spacing: 0.02em;
     background-color: #fafafa;
-    color: ${$colors.gray.main};
   }
   @font-face {
     font-family: "Montserrat-Bold";
@@ -37,7 +47,8 @@ const styles = css`
   min-height: 100vh;
   margin: 0 auto;
   padding: 32px 24px;
-  background: #fff;
+  background: var(--main-bg);
+  color: var(--main-text);
 
   > footer {
     width: 100%;
@@ -54,14 +65,14 @@ const styles = css`
 
       a {
         text-decoration: none;
-        color: ${$colors.gray.main};
+        color: var(--main-text);
       }
     }
 
     > h2 {
       font-size: 16px;
       font-weight: normal;
-      color: ${$colors.gray.light};
+      color: var(--main-text);
     }
   }
 `;
@@ -75,7 +86,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
           <a href="/">SHUNKE</a>
         </Link>
       </h1>
-      <h2>Shunsuke Takami</h2>
+      <h2>Shunke Takami</h2>
     </header>
     <main>
       <Component {...pageProps} />

@@ -4,8 +4,6 @@ import React from "react";
 import Link from "next/link";
 import { Contents } from "types/cms";
 import { dayjs } from "utils/dayjs";
-//
-import { $colors } from "common/theme";
 
 type Props = {
   contents: Contents[];
@@ -16,10 +14,10 @@ const styles = css`
   margin-bottom: 16px;
 
   .published-at {
-    color: ${$colors.gray.light};
+    color: var(--light-gray);
   }
   .blog-title {
-    color: ${$colors.gray.main};
+    color: var(--main-text);
     font-size: 18px;
 
     :hover {

@@ -1,15 +1,11 @@
 const $colors = {
   primary: {
-    light: "#ff7043",
-    main: "#ff5722",
-    dark: "#bf360c",
+    light: "#f57c00", // material orange 700
+    main: "#ef6c00", // material orange 800
+    dark: "#b53d00", // material orange 800 dark
   },
   secondary: {
-    main: "#007c91",
-  },
-  gray: {
-    light: "#616161",
-    main: "#424242",
+    main: "#00838f", // material cyan 800
   },
 } as const;
 

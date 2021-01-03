@@ -37,13 +37,14 @@ const styles = css`
     }
   }
   .published-at {
-    color: ${$colors.gray.light};
+    color: var(--light-gray);
     font-size: 14px;
     margin: 16px 0 40px;
     width: 100%;
     text-align: left;
   }
   a {
+    font-weight: 600;
     color: ${$colors.primary.dark};
   }
 `;
@@ -77,7 +78,10 @@ const Article: NextPage<Props> = ({ entry }: Props) => {
             <p className="published-at">
               <time>{dayjs(entry.publishedAt).format("YYYY.MM.DD")}</time>
             </p>
-            <div dangerouslySetInnerHTML={{ __html: entry.text }} />
+            <div
+              className="text"
+              dangerouslySetInnerHTML={{ __html: entry.text }}
+            />
           </>
         )}
       </article>

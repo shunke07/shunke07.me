@@ -9,8 +9,13 @@ const styles = css`
   height: 216px;
   margin-bottom: 24px;
   border-radius: 4px;
-  box-shadow: ${$boxShadows["1dp"]};
   list-style: none;
+  box-shadow: ${$boxShadows["1dp"]};
+  transition: all 0.1s;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #373737;
+  }
 
   :hover {
     box-shadow: ${$boxShadows["4dp"]};
@@ -23,7 +28,7 @@ const styles = css`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    color: ${$colors.gray.main};
+    color: var(--main-text);
     text-decoration: none;
 
     .title {
@@ -38,6 +43,7 @@ const styles = css`
 
       > img {
         margin-right: 8px;
+        color: var(--light-gray);
       }
     }
     .tools {
