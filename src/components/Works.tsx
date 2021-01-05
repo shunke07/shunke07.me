@@ -2,7 +2,6 @@
 /** @jsx jsx */
 import React from "react";
 import { css, jsx } from "@emotion/react";
-import { $boxShadows } from "common/theme";
 import OpenIcon from "../../public/assets/svg/open-in-new.svg";
 
 const styles = css`
@@ -14,7 +13,7 @@ const styles = css`
     height: 216px;
     margin-bottom: 24px;
     border-radius: 4px;
-    box-shadow: ${$boxShadows["1dp"]};
+    box-shadow: var(--box-shadow-1dp);
     transition: all 0.1s;
 
     @media screen and (max-width: 375px) {
@@ -30,7 +29,7 @@ const styles = css`
     }
 
     :hover {
-      box-shadow: ${$boxShadows["4dp"]};
+      box-shadow: var(--box-shadow-4dp);
     }
     > a {
       width: 100%;

@@ -6,7 +6,6 @@ import Head from "next/head";
 import { getContents } from "repositories/cms";
 import { Contents } from "types/cms";
 //
-import { $colors } from "common/theme";
 import { Works } from "components/Works";
 import { EntryList } from "components/EntryList";
 import MailIcon from "../../public/assets/svg/mail.svg";
@@ -16,10 +15,10 @@ const styles = css`
     margin: 56px 0;
 
     > h1 {
-      color: ${$colors.primary.main};
+      color: var(--primary-main);
       margin-bottom: 16px;
       padding-bottom: 4px;
-      border-bottom: 2px solid ${$colors.primary.main};
+      border-bottom: 2px solid var(--primary-main);
       letter-spacing: 0.03em;
     }
   }

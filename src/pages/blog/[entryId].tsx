@@ -7,8 +7,6 @@ import Head from "next/head";
 import { getContents, getEntry } from "repositories/cms";
 import { Contents } from "types/cms";
 import { dayjs } from "utils/dayjs";
-//
-import { $colors } from "common/theme";
 
 type Props = {
   entry: Contents;
@@ -34,7 +32,7 @@ const styles = css`
       bottom: 0;
       left: 0;
       width: 6px;
-      background-color: ${$colors.primary.main};
+      background-color: var(--primary-main);
       border-radius: 99rem;
     }
   }
@@ -47,7 +45,7 @@ const styles = css`
   }
   a {
     font-weight: 600;
-    color: ${$colors.primary.dark};
+    color: var(--primary-text);
   }
 `;
 

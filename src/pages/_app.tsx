@@ -8,14 +8,22 @@ import Link from "next/link";
 const globalStyles = css`
   :root {
     --main-text: #424242; // gray 800
+    --primary-main: #ef6c00; // material orange 800
+    --primary-text: #b53d00; // material orange 800 dark
     --secondary: #00838f; // cyan 800
     --primary-gray: #616161; // gray 700
     --secondary-gray: #9e9e9e; // gray 500
     --main-bg: #fff;
+    --box-shadow-1dp: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+      0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    --box-shadow-4dp: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
   }
   @media (prefers-color-scheme: dark) {
     :root {
       --main-text: #fafafa; // gray 50
+      --primary-main: #ef6c00; // material orange 800
+      --primary-text: #f57c00; // material orange 700
       --secondary: #4fb3bf; // cyan 800 light
       --secondary-gray: #eeeeee; // gray 200
       --primary-gray: #9e9e9e; // gray 500
