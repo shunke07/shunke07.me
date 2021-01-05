@@ -10,7 +10,7 @@ const globalStyles = css`
     --main-text: #424242; // gray 800
     --secondary: #00838f; // cyan 800
     --primary-gray: #616161; // gray 700
-    --secondary-gray: #bdbdbd // gray 400
+    --secondary-gray: #9e9e9e; // gray 500
     --main-bg: #fff;
   }
   @media (prefers-color-scheme: dark) {

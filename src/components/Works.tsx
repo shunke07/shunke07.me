@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import React from "react";
 import { css, jsx } from "@emotion/react";
-import { $colors, $boxShadows } from "common/theme";
+import { $boxShadows } from "common/theme";
 import OpenIcon from "../../public/assets/svg/open-in-new.svg";
 
 const styles = css`
