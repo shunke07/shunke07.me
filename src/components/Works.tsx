@@ -6,63 +6,66 @@ import { $colors, $boxShadows } from "common/theme";
 import OpenIcon from "../../public/assets/svg/open-in-new.svg";
 
 const styles = css`
-  position: relative;
-  width: 100%;
-  height: 216px;
-  margin-bottom: 24px;
-  border-radius: 4px;
   list-style: none;
-  box-shadow: ${$boxShadows["1dp"]};
-  transition: all 0.1s;
 
-  @media screen and (max-width: 375px) {
-    height: 300px;
-  }
-
-  @media screen and (min-width: 376px) and (max-width: 480px) {
-    height: 240px;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background-color: #373737;
-  }
-
-  :hover {
-    box-shadow: ${$boxShadows["4dp"]};
-  }
-  > a {
+  > section {
+    position: relative;
     width: 100%;
-    height: 100%;
-    padding: 12px 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    color: var(--main-text);
-    text-decoration: none;
+    height: 216px;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    box-shadow: ${$boxShadows["1dp"]};
+    transition: all 0.1s;
 
-    .title {
-      display: flex;
-      align-items: center;
-      margin: 0 0 12px -32px;
-      font-size: 20px;
-      font-weight: bold;
-      text-decoration: none;
-      color: ${$colors.secondary.main};
-      position: relative;
-
-      > svg {
-        margin-right: 8px;
-        color: var(--light-gray);
-      }
+    @media screen and (max-width: 375px) {
+      height: 300px;
     }
-    .tools {
-      position: absolute;
+
+    @media screen and (min-width: 376px) and (max-width: 480px) {
+      height: 240px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #373737;
+    }
+
+    :hover {
+      box-shadow: ${$boxShadows["4dp"]};
+    }
+    > a {
       width: 100%;
-      text-align: center;
-      font-size: 15px;
-      padding: 0 16px;
-      bottom: 12px;
+      height: 100%;
+      padding: 12px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      color: var(--main-text);
+      text-decoration: none;
+
+      .title {
+        display: flex;
+        align-items: center;
+        margin: 0 0 12px -32px;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        color: var(--secondary);
+        position: relative;
+
+        > svg {
+          margin-right: 8px;
+          color: var(--secondary-gray);
+        }
+      }
+      .tools {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+        padding: 0 16px;
+        bottom: 12px;
+      }
     }
   }
 `;
@@ -90,14 +93,16 @@ export const Works: React.FC = () => {
       {works &&
         works.map((work, index) => (
           <li css={styles} key={index}>
-            <a href={work.url} target="_blank" rel="noopener noreferrer">
-              <p className="title">
-                <OpenIcon title="新規タブで開く" />
-                {work.title}
-              </p>
-              <p>{work.description}</p>
-              <p className="tools">{work.tools}</p>
-            </a>
+            <section>
+              <a href={work.url} target="_blank" rel="noopener noreferrer">
+                <h1 className="title">
+                  <OpenIcon title="新規タブで開く" />
+                  {work.title}
+                </h1>
+                <p>{work.description}</p>
+                <p className="tools">{work.tools}</p>
+              </a>
+            </section>
           </li>
         ))}
     </ul>

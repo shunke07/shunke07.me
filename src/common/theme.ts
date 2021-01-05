@@ -4,9 +4,6 @@ const $colors = {
     main: "#ef6c00", // material orange 800
     dark: "#b53d00", // material orange 800 dark
   },
-  secondary: {
-    main: "#00838f", // material cyan 800
-  },
 } as const;
 
 const $boxShadows = {

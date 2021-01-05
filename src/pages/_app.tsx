@@ -7,15 +7,19 @@ import Link from "next/link";
 
 const globalStyles = css`
   :root {
-    --main-text: #424242;
-    --light-gray: #616161;
+    --main-text: #424242; // gray 800
+    --secondary: #00838f; // cyan 800
+    --primary-gray: #616161; // gray 700
+    --secondary-gray: #bdbdbd // gray 400
     --main-bg: #fff;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --main-text: #fafafa;
-      --light-gray: #9e9e9e;
-      --main-bg: #212121;
+      --main-text: #fafafa; // gray 50
+      --secondary: #4fb3bf; // cyan 800 light
+      --secondary-gray: #eeeeee; // gray 200
+      --primary-gray: #9e9e9e; // gray 500
+      --main-bg: #212121; // gray 900
     }
   }
 

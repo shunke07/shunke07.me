@@ -15,7 +15,7 @@ const styles = css`
   margin-bottom: 16px;
 
   .published-at {
-    color: var(--light-gray);
+    color: var(--primary-gray);
   }
   .blog-title {
     color: var(--main-text);

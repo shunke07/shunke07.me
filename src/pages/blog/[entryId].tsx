@@ -39,7 +39,7 @@ const styles = css`
     }
   }
   .published-at {
-    color: var(--light-gray);
+    color: var(--primary-gray);
     font-size: 14px;
     margin: 16px 0 40px;
     width: 100%;
