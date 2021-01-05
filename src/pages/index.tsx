@@ -113,6 +113,8 @@ const Home: NextPage<Props> = ({ contents }: Props) => {
             className="thumbnail"
             src="/assets/images/icon.png"
             alt="プロフィール画像"
+            width="80"
+            height="80"
           />
         </picture>
         <div className="link-buttons">
@@ -125,6 +127,8 @@ const Home: NextPage<Props> = ({ contents }: Props) => {
               className="github"
               src="/assets/svg/github-logo.svg"
               alt="GitHubアイコン"
+              width="32"
+              height="32"
             />
           </a>
           <a
@@ -136,6 +140,8 @@ const Home: NextPage<Props> = ({ contents }: Props) => {
               className="twitter"
               src="/assets/svg/twitter-logo.svg"
               alt="Twitterアイコン"
+              width="32"
+              height="32"
             />
           </a>
         </div>
