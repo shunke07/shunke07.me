@@ -6,7 +6,7 @@ export type Contents = {
   updatedAt: string;
   title: string;
   text: string;
-  thumbnail: {
+  thumbnail?: {
     url: string;
   };
 };

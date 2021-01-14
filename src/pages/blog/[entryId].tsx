@@ -10,6 +10,7 @@ import { dayjs } from "utils/dayjs";
 
 type Props = {
   entry: Contents;
+  entryId: string;
 };
 
 type Params = {
@@ -32,7 +33,7 @@ const styles = css`
       bottom: 0;
       left: 0;
       width: 6px;
-      background-color: var(--primary-main);
+      background-color: var(--primary);
       border-radius: 99rem;
     }
   }
@@ -61,19 +62,24 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const entry = await getEntry(entryId);
 
   return {
-    props: { entry },
+    props: { entry, entryId },
   };
 };
 
-const Article: NextPage<Props> = ({ entry }: Props) => {
+const Article: NextPage<Props> = ({ entry, entryId }: Props) => {
   return (
     <Fragment>
       <Head>
         <title>{entry.title} | shunke07.com</title>
-        <meta property="og:url" content={location.href} />
+        <meta
+          property="og:url"
+          content={`https://shunke07.com/blog/${entryId}`}
+        />
         <meta property="og:title" content={entry.title} />
         <meta property="og:description" content={entry.title} />
-        <meta property="og:image" content={entry.thumbnail.url} />
+        {!!entry.thumbnail && (
+          <meta property="og:image" content={entry.thumbnail.url} />
+        )}
       </Head>
       <article css={styles}>
         {entry && (

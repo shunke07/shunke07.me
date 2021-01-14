@@ -15,10 +15,10 @@ const styles = css`
     margin: 56px 0;
 
     > h1 {
-      color: var(--primary-main);
+      color: var(--primary);
       margin-bottom: 16px;
       padding-bottom: 4px;
-      border-bottom: 2px solid var(--primary-main);
+      border-bottom: 2px solid var(--primary);
       letter-spacing: 0.03em;
     }
   }
