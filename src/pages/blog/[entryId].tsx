@@ -76,6 +76,10 @@ const styles = css`
     code {
       font-size: 15px;
     }
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 `;
 
