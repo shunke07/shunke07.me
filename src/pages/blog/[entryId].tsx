@@ -73,6 +73,9 @@ const styles = css`
       margin-top: 16px;
       padding-left: 20px;
     }
+    li {
+      margin-bottom: 4px;
+    }
     code {
       font-size: 15px;
     }
