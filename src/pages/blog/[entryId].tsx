@@ -70,6 +70,10 @@ const Article: NextPage<Props> = ({ entry }: Props) => {
     <Fragment>
       <Head>
         <title>{entry.title} | shunke07.com</title>
+        <meta property="og:url" content={location.href} />
+        <meta property="og:title" content={entry.title} />
+        <meta property="og:description" content={entry.title} />
+        <meta property="og:image" content={entry.thumbnail.url} />
       </Head>
       <article css={styles}>
         {entry && (
