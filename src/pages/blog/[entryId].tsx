@@ -70,6 +70,7 @@ const styles = css`
       margin-top: 12px;
     }
     ul {
+      margin-top: 16px;
       padding-left: 20px;
     }
     code {
