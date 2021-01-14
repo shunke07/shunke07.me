@@ -7,6 +7,9 @@ import Head from "next/head";
 import { getContents, getEntry } from "repositories/cms";
 import { Contents } from "types/cms";
 import { dayjs } from "utils/dayjs";
+import cheerio from "cheerio";
+import hljs from "highlight.js";
+import "highlight.js/styles/atom-one-dark.css";
 
 type Props = {
   entry: Contents;
@@ -48,6 +51,31 @@ const styles = css`
     font-weight: 600;
     color: var(--primary-text);
   }
+  .text {
+    h2 {
+      margin-bottom: 16px;
+
+      &:not(:first-of-type) {
+        margin-top: 56px;
+      }
+    }
+    h3 {
+      margin: 32px 0 12px;
+    }
+    strong {
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    pre {
+      margin-top: 12px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    code {
+      font-size: 15px;
+    }
+  }
 `;
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -61,8 +89,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const entryId = (params as Params).entryId as string;
   const entry = await getEntry(entryId);
 
+  const $ = cheerio.load(entry.text);
+  $("pre code").each((_, elm) => {
+    const result = hljs.highlightAuto($(elm).text());
+    $(elm).html(result.value);
+    $(elm).addClass("hljs");
+  });
+
   return {
-    props: { entry, entryId },
+    props: {
+      entry: { ...entry, text: $.html() },
+      entryId,
+    },
   };
 };
 

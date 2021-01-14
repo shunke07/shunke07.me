@@ -10,7 +10,9 @@
   "dependencies": {
     "@emotion/react": "^11.1.4",
     "babel-plugin-inline-react-svg": "^1.1.2",
+    "cheerio": "^1.0.0-rc.5",
     "dayjs": "^1.8.29",
+    "highlight.js": "^10.5.0",
     "next": "^10.0.4",
     "node-fetch": "^2.6.0",
     "react": "^17.0.1",
