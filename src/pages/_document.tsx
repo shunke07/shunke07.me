@@ -39,7 +39,7 @@ class MyDocument extends Document {
             href="/icons/favicon-16x16.png"
           />
           <link rel="shortcut icon" href="/favicon.ico" />
-          <link rel="manifest" href="/static/manifest.json" />
+          <link rel="manifest" href="/manifest.json" />
           {/* OGP */}
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:url" content="https://shunke07.com" />
