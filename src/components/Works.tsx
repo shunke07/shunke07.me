@@ -7,14 +7,21 @@ import OpenIcon from "../../public/assets/svg/open-in-new.svg";
 const styles = css`
   list-style: none;
 
+  &:first-child {
+    margin-top: 32px;
+  }
+
+  + li {
+    margin-top: 24px;
+  }
+
   > section {
     position: relative;
-    width: 100%;
-    height: 216px;
-    margin-bottom: 24px;
+    height: 196px;
     border-radius: 4px;
     box-shadow: var(--box-shadow-1dp);
     transition: all 0.1s;
+    margin: 0;
 
     @media screen and (max-width: 375px) {
       height: 300px;
@@ -22,6 +29,11 @@ const styles = css`
 
     @media screen and (min-width: 376px) and (max-width: 480px) {
       height: 240px;
+    }
+
+    @media screen and (min-width: 480px) {
+      width: calc(100% - 64px);
+      margin: 0 0 24px 32px;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -82,7 +94,7 @@ const works = [
     url: "https://github.com/shunke07/shunke07.com",
     description:
       "本サイト。Headless CMS と Next.js、Vercel を利用した静的ブログサイトです。デバイスのテーマに応じたカラーを表示（ダークモード対応）しています。",
-    tools: "TypeScript, Next.js, Emotion (CSS in JS), microCMS (Headless CMS)",
+    tools: "TypeScript, Next.js, Emotion (CSS in JS), microCMS",
   },
 ];
 

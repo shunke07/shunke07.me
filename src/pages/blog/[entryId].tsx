@@ -74,7 +74,7 @@ const styles = css`
       padding-left: 20px;
     }
     li {
-      margin-bottom: 4px;
+      margin-bottom: 8px;
     }
     code {
       font-size: 15px;

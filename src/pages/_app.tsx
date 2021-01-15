@@ -55,7 +55,7 @@ const globalStyles = css`
 
 const styles = css`
   position: relative;
-  max-width: 480px;
+  max-width: 680px;
   overflow: hidden;
   min-height: 100vh;
   margin: 0 auto;

@@ -34,7 +34,7 @@ export const EntryList: React.FC<Props> = ({ contents }) => {
         contents.map((content) => (
           <li css={styles} key={content.id}>
             <p className="published-at">
-              {dayjs(content.publishedAt).add(9, "hour").format("YYYY.MM.DD")}
+              {dayjs(content.createdAt).add(9, "hour").format("YYYY.MM.DD")}
             </p>
             <Link href={`/blog/${content.id}`}>
               <a className="blog-title" href={`/blog/${content.id}`}>
