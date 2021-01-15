@@ -38,6 +38,7 @@ class MyDocument extends Document {
             sizes="16x16"
             href="/icons/favicon-16x16.png"
           />
+          <link rel="mask-icon" href="/icons/mask-icon.svg" color="#ef6c00" />
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="manifest" href="/manifest.json" />
           {/* OGP */}
