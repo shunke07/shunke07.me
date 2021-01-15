@@ -81,7 +81,7 @@ const styles = css`
 
     > svg {
       margin-right: 4px;
-      color: var(--primary-gray);
+      color: var(--primary-grey);
     }
   }
 `;

@@ -4,6 +4,7 @@ import { Fragment } from "react";
 import { css, jsx } from "@emotion/react";
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
+import { TableOfContents, TOC } from "components/TableOfContents";
 import { getContents, getEntry } from "repositories/cms";
 import { Contents } from "types/cms";
 import { dayjs } from "utils/dayjs";
@@ -14,6 +15,7 @@ import "highlight.js/styles/atom-one-dark.css";
 type Props = {
   entry: Contents;
   entryId: string;
+  toc: TOC[];
 };
 
 type Params = {
@@ -41,7 +43,7 @@ const styles = css`
     }
   }
   .published-at {
-    color: var(--primary-gray);
+    color: var(--primary-grey);
     font-size: 14px;
     margin: 16px 0 40px;
     width: 100%;
@@ -106,15 +108,29 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     $(elm).addClass("hljs");
   });
 
+  $("h1, h2, h3").each((_, elm) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    $(elm).attr("id", () => (elm.children[0] as any).data ?? "");
+  });
+
+  const headings = $("h1, h2, h3").toArray();
+  const toc = headings.map((data) => ({
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    text: (data.children[0] as any).data ?? "",
+    id: data.attribs.id,
+    name: data.name,
+  }));
+
   return {
     props: {
       entry: { ...entry, text: $.html() },
       entryId,
+      toc,
     },
   };
 };
 
-const Article: NextPage<Props> = ({ entry, entryId }: Props) => {
+const Article: NextPage<Props> = ({ entry, entryId, toc }: Props) => {
   return (
     <Fragment>
       <Head>
@@ -136,6 +152,7 @@ const Article: NextPage<Props> = ({ entry, entryId }: Props) => {
             <p className="published-at">
               <time>{dayjs(entry.publishedAt).format("YYYY.MM.DD")}</time>
             </p>
+            <TableOfContents toc={toc} />
             <div
               className="text"
               dangerouslySetInnerHTML={{ __html: entry.text }}

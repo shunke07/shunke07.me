@@ -66,7 +66,7 @@ const styles = css`
 
         > svg {
           margin-right: 8px;
-          color: var(--secondary-gray);
+          color: var(--secondary-grey);
         }
       }
       .tools {
