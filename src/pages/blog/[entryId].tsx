@@ -151,6 +151,7 @@ const Article: NextPage<Props> = ({ entry, entryId, toc }: Props) => {
     <Fragment>
       <Head>
         <title>{entry.title} | shunke07.com</title>
+        <meta name="twitter:card" content="summary" />
         <meta
           name="twitter:url"
           content={`https://shunke07.com/blog/${entryId}`}
@@ -162,7 +163,8 @@ const Article: NextPage<Props> = ({ entry, entryId, toc }: Props) => {
           content={entry.title}
           key="twitter:description"
         />
-
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="shunke07.com" />
         {!!entry.thumbnail && (
           <meta
             name="twitter:image"
