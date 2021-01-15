@@ -152,13 +152,41 @@ const Article: NextPage<Props> = ({ entry, entryId, toc }: Props) => {
       <Head>
         <title>{entry.title} | shunke07.com</title>
         <meta
+          name="twitter:url"
+          content={`https://shunke07.com/blog/${entryId}`}
+          key="twitter:url"
+        />
+        <meta name="twitter:title" content={entry.title} key="twitter:title" />
+        <meta
+          name="twitter:description"
+          content={entry.title}
+          key="twitter:description"
+        />
+
+        {!!entry.thumbnail && (
+          <meta
+            name="twitter:image"
+            content={entry.thumbnail.url}
+            key="twitter:image"
+          />
+        )}
+        <meta
           property="og:url"
           content={`https://shunke07.com/blog/${entryId}`}
+          key="og:url"
         />
-        <meta property="og:title" content={entry.title} />
-        <meta property="og:description" content={entry.title} />
+        <meta property="og:title" content={entry.title} key="og:title" />
+        <meta
+          property="og:description"
+          content={entry.title}
+          key="og:description"
+        />
         {!!entry.thumbnail && (
-          <meta property="og:image" content={entry.thumbnail.url} />
+          <meta
+            property="og:image"
+            content={entry.thumbnail.url}
+            key="og:image"
+          />
         )}
       </Head>
       <article css={styles}>

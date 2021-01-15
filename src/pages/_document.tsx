@@ -43,22 +43,40 @@ class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
           {/* OGP */}
           <meta name="twitter:card" content="summary" />
-          <meta name="twitter:url" content="https://shunke07.com" />
-          <meta name="twitter:title" content="shunke07.com" />
+          <meta
+            name="twitter:url"
+            content="https://shunke07.com"
+            key="twitter:url"
+          />
+          <meta
+            name="twitter:title"
+            content="shunke07.com"
+            key="twitter:title"
+          />
           <meta
             name="twitter:description"
             content="Shunke is Software Developer, Web Front-End Developer in Tokyo."
+            key="twitter:description"
           />
-          <meta name="twitter:image" content="/icons/apple-touch-icon.png" />
+          <meta
+            name="twitter:image"
+            content="/icons/icon-512x512.png"
+            key="twitter:image"
+          />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="shunke07.com" />
+          <meta property="og:title" content="shunke07.com" key="og:title" />
           <meta
             property="og:description"
             content="Shunke is Software Developer, Web Front-End Developer in Tokyo."
+            key="og:description"
           />
           <meta property="og:site_name" content="shunke07.com" />
-          <meta property="og:url" content="https://shunke07.com" />
-          <meta property="og:image" content="/icons/apple-touch-icon.png" />
+          <meta property="og:url" content="https://shunke07.com" key="og:url" />
+          <meta
+            property="og:image"
+            content="/icons/icon-512x512.png"
+            key="og:image"
+          />
           {/* Web-font */}
           <link
             rel="preload"
