@@ -113,6 +113,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     $(elm).attr("id", () => (elm.children[0] as any).data ?? "");
   });
 
+  $("img").each((_, elm) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const currentSrc = $(elm).attr("src");
+    $(elm).attr("src", () => currentSrc + "?w=680");
+    $(elm).attr("width", () => "680");
+    $(elm).attr("loading", () => "lazy");
+  });
+
   const headings = $("h1, h2, h3").toArray();
   const toc = headings.map((data) => ({
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
