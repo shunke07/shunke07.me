@@ -48,7 +48,6 @@ const styles = css`
     text-align: left;
   }
   a {
-    font-weight: 600;
     color: var(--primary-text);
   }
   .text {
@@ -60,6 +59,9 @@ const styles = css`
       }
     }
     h3 {
+      margin: 32px 0 12px;
+    }
+    h4 {
       margin: 32px 0 12px;
     }
     strong {
