@@ -7,12 +7,12 @@ import Link from "next/link";
 
 const globalStyles = css`
   :root {
-    --main-text: #424242; // gray 800
+    --main-text: #424242; // grey 800
     --primary: #ef6c00; // orange 800
     --primary-text: #b53d00; // orange 800 dark
     --secondary: #00838f; // cyan 800
-    --primary-gray: #616161; // gray 700
-    --secondary-gray: #9e9e9e; // gray 500
+    --primary-grey: #616161; // grey 700
+    --secondary-grey: #9e9e9e; // grey 500
     --main-bg: #fff;
     --box-shadow-1dp: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
       0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
@@ -21,12 +21,12 @@ const globalStyles = css`
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --main-text: #fafafa; // gray 50
+      --main-text: #fafafa; // grey 50
       --primary-text: #f57c00; // orange 700
       --secondary: #4fb3bf; // cyan 800 light
-      --secondary-gray: #eeeeee; // gray 200
-      --primary-gray: #9e9e9e; // gray 500
-      --main-bg: #212121; // gray 900
+      --secondary-grey: #eeeeee; // grey 200
+      --primary-grey: #9e9e9e; // grey 500
+      --main-bg: #212121; // grey 900
     }
   }
 
@@ -39,13 +39,13 @@ const globalStyles = css`
   }
   html {
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: greyscale;
   }
   body {
     font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Helvetica Neue",
       Arial, Meiryo, sans-serif;
     letter-spacing: 0.02em;
-    background-color: #fafafa;
+    background-color: #eceff1; // blue-grey 50
   }
   @font-face {
     font-family: "Montserrat-Bold";
