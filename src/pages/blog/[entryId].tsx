@@ -118,7 +118,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const currentSrc = $(elm).attr("src");
     $(elm).attr("src", () => currentSrc + "?w=680");
     $(elm).attr("width", () => "680");
+    $(elm).attr("height", () => "340");
     $(elm).attr("loading", () => "lazy");
+    $(elm).attr("alt", () => "画像");
   });
 
   const headings = $("h1, h2, h3").toArray();

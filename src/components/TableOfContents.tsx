@@ -33,10 +33,6 @@ const styles = css`
 
       &.toc-h3 {
         margin-left: 24px;
-
-        + .toc-h3 {
-          margin-top: -4px;
-        }
       }
     }
   }
