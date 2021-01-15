@@ -4,6 +4,7 @@ import { Fragment } from "react";
 import { css, jsx } from "@emotion/react";
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import { TableOfContents, TOC } from "components/TableOfContents";
 import { getContents, getEntry } from "repositories/cms";
 import { Contents } from "types/cms";
@@ -25,6 +26,11 @@ type Params = {
 const styles = css`
   margin: 56px 0;
 
+  .thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
   .title {
     position: relative;
     font-size: 28px;
@@ -141,6 +147,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 const Article: NextPage<Props> = ({ entry, entryId, toc }: Props) => {
+  console.log(entry);
   return (
     <Fragment>
       <Head>
@@ -162,6 +169,15 @@ const Article: NextPage<Props> = ({ entry, entryId, toc }: Props) => {
             <p className="published-at">
               <time>{dayjs(entry.publishedAt).format("YYYY.MM.DD")}</time>
             </p>
+            {!!entry.thumbnail && (
+              <Image
+                className="thumbnail"
+                src={entry.thumbnail.url}
+                alt="サムネイル"
+                width={680}
+                height={340}
+              />
+            )}
             {!!toc && !!toc.length && <TableOfContents toc={toc} />}
             <div
               className="text"
