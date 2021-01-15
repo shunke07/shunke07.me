@@ -147,7 +147,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 const Article: NextPage<Props> = ({ entry, entryId, toc }: Props) => {
-  console.log(entry);
   return (
     <Fragment>
       <Head>
