@@ -1,4 +1,5 @@
-import withPWA from "next-pwa";
+// eslint-disable-next-line
+const withPWA = require('next-pwa')
 
 // eslint-disable-next-line
 module.exports = withPWA({
