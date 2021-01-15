@@ -22,7 +22,7 @@ const globalStyles = css`
   @media (prefers-color-scheme: dark) {
     :root {
       --main-text: #fafafa; // grey 50
-      --primary-text: #f57c00; // orange 700
+      --primary-text: #ff7d47; // orange 700 light
       --secondary: #4fb3bf; // cyan 800 light
       --secondary-grey: #eeeeee; // grey 200
       --primary-grey: #9e9e9e; // grey 500

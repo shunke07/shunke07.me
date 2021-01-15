@@ -27,6 +27,10 @@ const styles = css`
     > li {
       margin-bottom: 8px;
 
+      > a {
+        font-weight: 600;
+      }
+
       &.toc-h3 {
         margin-left: 24px;
 

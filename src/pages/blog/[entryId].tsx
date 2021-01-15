@@ -10,7 +10,7 @@ import { Contents } from "types/cms";
 import { dayjs } from "utils/dayjs";
 import cheerio from "cheerio";
 import hljs from "highlight.js";
-import "highlight.js/styles/atom-one-dark.css";
+import "highlight.js/styles/a11y-dark.css";
 
 type Props = {
   entry: Contents;
@@ -152,7 +152,7 @@ const Article: NextPage<Props> = ({ entry, entryId, toc }: Props) => {
             <p className="published-at">
               <time>{dayjs(entry.publishedAt).format("YYYY.MM.DD")}</time>
             </p>
-            <TableOfContents toc={toc} />
+            {!!toc && !!toc.length && <TableOfContents toc={toc} />}
             <div
               className="text"
               dangerouslySetInnerHTML={{ __html: entry.text }}
