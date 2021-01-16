@@ -26,10 +26,15 @@ type Params = {
 const styles = css`
   margin: 56px 0;
 
-  .thumbnail {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  .image-container {
+    width: calc(100% + 48px);
+    max-width: calc(100% + 48px);
+    margin: 0 0 16px -24px;
+
+    .thumbnail {
+      height: 100%;
+      object-fit: contain;
+    }
   }
   .title {
     position: relative;
@@ -177,6 +182,7 @@ const Article: NextPage<Props> = ({ entry, entryId, toc }: Props) => {
           content={`https://shunke07.com/blog/${entryId}`}
           key="og:url"
         />
+        正直、他のチームの情報がどうのこうのという話は考えなくて大丈夫ですよ。
         <meta property="og:title" content={entry.title} key="og:title" />
         <meta
           property="og:description"
@@ -194,19 +200,21 @@ const Article: NextPage<Props> = ({ entry, entryId, toc }: Props) => {
       <article css={styles}>
         {entry && (
           <Fragment>
+            {!!entry.thumbnail && (
+              <div className="image-container">
+                <Image
+                  className="thumbnail"
+                  src={entry.thumbnail.url}
+                  alt="サムネイル"
+                  width={768}
+                  height={320}
+                />
+              </div>
+            )}
             <h1 className="title">{entry.title}</h1>
             <p className="published-at">
               <time>{dayjs(entry.publishedAt).format("YYYY.MM.DD")}</time>
             </p>
-            {!!entry.thumbnail && (
-              <Image
-                className="thumbnail"
-                src={entry.thumbnail.url}
-                alt="サムネイル"
-                width={680}
-                height={340}
-              />
-            )}
             {!!toc && !!toc.length && <TableOfContents toc={toc} />}
             <div
               className="text"
