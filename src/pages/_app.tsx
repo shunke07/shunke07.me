@@ -11,9 +11,11 @@ const globalStyles = css`
     --primary: #ef6c00; // orange 800
     --primary-text: #b53d00; // orange 800 dark
     --secondary: #00838f; // cyan 800
+    --secondary-text: #005662; // cyan 800 dark
     --primary-grey: #616161; // grey 700
     --secondary-grey: #9e9e9e; // grey 500
     --main-bg: #fff;
+    --card-bg: #f5f5f5; // gray 100
     --box-shadow-1dp: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
       0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     --box-shadow-4dp: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
@@ -24,9 +26,11 @@ const globalStyles = css`
       --main-text: #fafafa; // grey 50
       --primary-text: #ff7d47; // orange 700 light
       --secondary: #4fb3bf; // cyan 800 light
+      --secondary-text: #56c8d8; // cyan 700 light
       --secondary-grey: #eeeeee; // grey 200
-      --primary-grey: #9e9e9e; // grey 500
-      --main-bg: #212121; // grey 900
+      --primary-grey: #bdbdbd; // grey 500
+      --main-bg: #373737; // grey 700 dark
+      --card-bg: #424242; // grey 800
     }
   }
 
@@ -45,7 +49,7 @@ const globalStyles = css`
     font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Helvetica Neue",
       Arial, Meiryo, sans-serif;
     letter-spacing: 0.02em;
-    background-color: #eceff1; // blue-grey 50
+    background-color: #eceff1; // blue-grey 50 dark
   }
   @font-face {
     font-family: "Montserrat-Bold";

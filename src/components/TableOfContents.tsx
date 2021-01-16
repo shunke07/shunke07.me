@@ -12,11 +12,7 @@ const styles = css`
   margin-bottom: 40px;
   border-radius: 8px;
   padding: 16px 24px;
-  background-color: #f5f5f5;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: #373737;
-  }
+  background-color: var(--card-bg);
 
   h1 {
     margin-bottom: 12px;
@@ -28,7 +24,7 @@ const styles = css`
       margin-bottom: 8px;
 
       > a {
-        font-weight: 600;
+        color: var(--secondary-text);
       }
 
       &.toc-h3 {

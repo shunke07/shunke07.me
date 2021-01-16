@@ -22,6 +22,7 @@ const styles = css`
     box-shadow: var(--box-shadow-1dp);
     transition: all 0.1s;
     margin: 0;
+    background-color: var(--card-bg);
 
     @media screen and (max-width: 375px) {
       height: 300px;
@@ -34,10 +35,6 @@ const styles = css`
     @media screen and (min-width: 480px) {
       width: calc(100% - 64px);
       margin: 0 0 24px 32px;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      background-color: #373737;
     }
 
     :hover {
