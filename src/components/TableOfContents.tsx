@@ -33,6 +33,7 @@ const styles = css`
 
       &.toc-h3 {
         margin-left: 24px;
+        list-style: circle;
       }
     }
   }
