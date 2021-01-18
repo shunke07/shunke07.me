@@ -84,12 +84,19 @@ const styles = css`
     pre {
       margin-top: 12px;
     }
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
     ul {
       margin-top: 16px;
       padding-left: 20px;
     }
     li {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     code {
       font-size: 15px;
