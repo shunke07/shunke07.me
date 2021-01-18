@@ -24,7 +24,7 @@ const styles = css`
       margin-bottom: 8px;
 
       > a {
-        color: var(--secondary-text);
+        color: var(--main-text);
       }
 
       &.toc-h3 {

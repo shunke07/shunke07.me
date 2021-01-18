@@ -127,9 +127,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   $("img").each((_, elm) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const currentSrc = $(elm).attr("src");
-    $(elm).attr("src", () => currentSrc + "?w=720");
-    $(elm).attr("width", () => "720");
-    $(elm).attr("height", () => "320");
+    $(elm).attr("src", () => currentSrc + "?w=680");
+    $(elm).attr("width", () => "680");
+    $(elm).attr("height", () => "340");
     $(elm).attr("loading", () => "lazy");
     $(elm).attr("alt", () => "画像");
   });
@@ -170,11 +170,17 @@ const Article: NextPage<Props> = ({ entry, entryId, toc }: Props) => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="shunke07.com" />
-        {!!entry.thumbnail && (
+        {entry.thumbnail ? (
           <meta
             name="twitter:image"
             content={entry.thumbnail.url}
             key="twitter:image"
+          />
+        ) : (
+          <meta
+            property="og:image"
+            content="/icons/icon-512x512.png"
+            key="og:image"
           />
         )}
         <meta
