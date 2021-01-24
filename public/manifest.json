@@ -31,7 +31,7 @@
   ],
   "theme_color": "#ef6c00",
   "background_color": "#eceff1",
-  "start_url": "https://shunke07.com",
+  "start_url": "/",
   "display": "standalone",
   "orientation": "portrait"
 }
