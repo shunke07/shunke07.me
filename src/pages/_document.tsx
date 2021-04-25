@@ -10,13 +10,13 @@ class MyDocument extends Document {
             content="Shunke is Software Developer, Web Front-End Developer in Tokyo."
           />
           {/* Web App */}
-          <meta name="application-name" content="shunke07.com" />
+          <meta name="application-name" content="shunke07.me" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
             content="default"
           />
-          <meta name="apple-mobile-web-app-title" content="shunke07.com" />
+          <meta name="apple-mobile-web-app-title" content="shunke07.me" />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="theme-color" content="#ef6c00" />

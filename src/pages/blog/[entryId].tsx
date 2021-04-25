@@ -132,7 +132,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   });
 
   $("img").each((_, elm) => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const currentSrc = $(elm).attr("src");
     $(elm).attr("src", () => currentSrc + "?w=680");
     $(elm).attr("width", () => "680");
@@ -162,11 +161,11 @@ const Article: NextPage<Props> = ({ entry, entryId, toc }: Props) => {
   return (
     <Fragment>
       <Head>
-        <title>{entry.title} | shunke07.com</title>
+        <title>{entry.title} | shunke07.me</title>
         <meta name="twitter:card" content="summary" />
         <meta
           name="twitter:url"
-          content={`https://shunke07.com/blog/${entryId}`}
+          content={`https://shunke07.me/blog/${entryId}`}
           key="twitter:url"
         />
         <meta name="twitter:title" content={entry.title} key="twitter:title" />
@@ -176,7 +175,7 @@ const Article: NextPage<Props> = ({ entry, entryId, toc }: Props) => {
           key="twitter:description"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="shunke07.com" />
+        <meta property="og:site_name" content="shunke07.me" />
         {entry.thumbnail ? (
           <meta
             name="twitter:image"
@@ -192,7 +191,7 @@ const Article: NextPage<Props> = ({ entry, entryId, toc }: Props) => {
         )}
         <meta
           property="og:url"
-          content={`https://shunke07.com/blog/${entryId}`}
+          content={`https://shunke07.me/blog/${entryId}`}
           key="og:url"
         />
         <meta property="og:title" content={entry.title} key="og:title" />

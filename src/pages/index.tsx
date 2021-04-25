@@ -102,14 +102,14 @@ const Home: NextPage<Props> = ({ contents }: Props) => {
   return (
     <div css={styles}>
       <Head>
-        <title>shunke07.com</title>
+        <title>shunke07.me</title>
         <meta name="twitter:card" content="summary" />
         <meta
           name="twitter:url"
-          content="https://shunke07.com"
+          content="https://shunke07.me"
           key="twitter:url"
         />
-        <meta name="twitter:title" content="shunke07.com" key="twitter:title" />
+        <meta name="twitter:title" content="shunke07.me" key="twitter:title" />
         <meta
           name="twitter:description"
           content="Shunke is Software Developer, Web Front-End Developer in Tokyo."
@@ -121,14 +121,14 @@ const Home: NextPage<Props> = ({ contents }: Props) => {
           key="twitter:image"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="shunke07.com" key="og:title" />
+        <meta property="og:title" content="shunke07.me" key="og:title" />
         <meta
           property="og:description"
           content="Shunke is Software Developer, Web Front-End Developer in Tokyo."
           key="og:description"
         />
-        <meta property="og:site_name" content="shunke07.com" />
-        <meta property="og:url" content="https://shunke07.com" key="og:url" />
+        <meta property="og:site_name" content="shunke07.me" />
+        <meta property="og:url" content="https://shunke07.me" key="og:url" />
         <meta
           property="og:image"
           content="/icons/icon-512x512.png"
@@ -204,7 +204,7 @@ const Home: NextPage<Props> = ({ contents }: Props) => {
         <h1>Contact</h1>
         <p className="mail">
           <MailIcon title="メールアイコン" />
-          contact[At]shunke07.com
+          contact[At]shunke07.me
         </p>
       </section>
     </div>

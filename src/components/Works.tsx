@@ -87,8 +87,8 @@ const works = [
     tools: "TypeScript, Nuxt.js, Firebase, SCSS, Spotify API",
   },
   {
-    title: "shunke07.com",
-    url: "https://github.com/shunke07/shunke07.com",
+    title: "shunke07.me",
+    url: "https://github.com/shunke07/shunke07.me",
     description:
       "本サイト。Headless CMS と Next.js、Vercel を利用した静的ブログサイトです。デバイスのテーマに応じたカラーを表示（ダークモード対応）しています。",
     tools: "TypeScript, Next.js, Emotion (CSS in JS), microCMS",
